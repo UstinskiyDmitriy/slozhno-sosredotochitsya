@@ -4,10 +4,10 @@
     /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   /* Page */
   background: var(--background-image);
+  background-color: var(--background-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background: var(--background-color);
   background-attachment: fixed;
   color: var(--main-text-color);
 }
@@ -406,6 +406,15 @@
     gap: 10px;
   }
 
+  .section:last-of-type .section__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .section:last-of-type .section__image-container {
+    width: 100px;
+  }
+
 }
 
 .footer {
@@ -429,7 +438,7 @@
 
 @media (width < 768px) and (width >= 375px) {
   .footer {
-    padding: 286px 14px;
+    padding: 260px 14px;
   }
 
   .footer__title {
