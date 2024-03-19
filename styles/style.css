@@ -13,14 +13,55 @@
 }
 
 .header {
-  padding: 0 20px;
   position: relative;
+  height: 100vh;
+  min-height: 668px;
 }
 
 @media (width < 768px) and (width >= 375px) {
   .header {
     padding: 0 10px;
   }
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--corners-color);
+  border-bottom: 1px solid var(--corners-color);
+  left: 20px;
+  bottom: 20px;
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .decorated-zone::before {
+    left: 10px;
+    bottom: 17px;
+  }
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--corners-color);
+  border-top: 1px solid var(--corners-color);
+  right: 20px;
+  top: 20px;
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .decorated-zone::after {
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.title-decor {
+  background: var(--title-decor);
 }
 
 .header__rec {
@@ -80,6 +121,7 @@
   font-size: 18px;
   font-weight: 400;
   color: var(--corners-color);
+  text-transform: lowercase;
   line-height: 100%;
   padding: 2.5px 12px;
   border: transparent;
@@ -94,6 +136,7 @@
 
 .header__theme-menu-button:focus {
   border: none;
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -102,6 +145,7 @@
 
 .header__theme-menu-button_active {
   border: 1px solid;
+  pointer-events: none;
 }
 
 @media (width < 1024px) and (width >= 768px) {
