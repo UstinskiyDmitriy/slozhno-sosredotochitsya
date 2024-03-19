@@ -4,6 +4,7 @@
 */
 :root {
   --font-family: "IBM Plex mono", sans-serif;
+  --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --main-text-color: #f1b2ce;
   --title-color: #db00ff;
   --title-shadow: #ff0070;
@@ -17,4 +18,10 @@
   --title-decor: var(--title-shadow);
   --link-shadow: var(--title-shadow);
   --rec-color: var(--title-shadow);
+}
+
+@media (width < 768px) and (width >= 375px) {
+  :root {
+    --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 }
