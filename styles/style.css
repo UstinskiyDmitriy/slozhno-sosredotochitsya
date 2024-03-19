@@ -14,10 +14,10 @@
 
 .header {
   position: relative;
-  height: 99vh;
+  height: 100vh;
   min-height: 668px;
   display: grid;
-  gap: 70px;
+  gap: 63px;
   grid-template-rows: 1fr 1fr 1fr;
 }
 
@@ -193,7 +193,6 @@
 
 .header__subtitle {
   color: var(--article-title-color);
-  align-self: flex-end;
   font-weight: 700;
   align-self: self-start;
   justify-self: self-end;
@@ -220,7 +219,7 @@
   }
 }
 .main {
-  margin-block-start: 8.5vh;
+  margin-block-start: 8vh;
   padding: 0 2vw;
   flex: 1 1 auto;
   display: flex;
@@ -238,7 +237,7 @@
 
 @media (width < 1024px) and (width >= 768px) {
   .main {
-   margin-block-start: 7vh;
+   margin-block-start: 6vh;
    padding: 0 2.5vw;
   }
 }
